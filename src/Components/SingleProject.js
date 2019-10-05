@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Title from './Title';
-function SingleProject({ color, mockup, icon1, icon2, icon3, icon4, icondesc1, icondesc2, icondesc3, icondesc4, title, subtitle, solution, challenge, slide }) {
+function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3, icon4, icondesc1, icondesc2, icondesc3, icondesc4, title, subtitle, solution, challenge, slide }) {
 
     return (
 
@@ -58,8 +58,12 @@ function SingleProject({ color, mockup, icon1, icon2, icon3, icon4, icondesc1, i
                     </div>
                     </div>
                     <div className="buttons text-center">
-                        <button className="mx-3">View Site</button>
-                        <button className="mx-3">View Code</button>
+                        <a target="_blank" href={projectLink}>
+                            <button className="mx-3">View Site</button>
+                        </a>
+                        <a href={github} target="_blank">
+                            <button className="mx-3">View Code</button>
+                        </a>
                     </div>
                 </div>
             </div>

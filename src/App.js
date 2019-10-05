@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Components/Header"
 import SingleProject from "./Components/SingleProject"
@@ -7,7 +7,6 @@ import NextArrow from "./Components/NextArrow"
 import PrevArrow from "./Components/PrevArrow"
 import './index.css';
 function App() {
- const [preloaderToggle, setPreloaderToggle] = useState("preloader")
 
   return (
     <React.Fragment>
@@ -57,6 +56,8 @@ function App() {
                       <li>minimalistic use interface design equipped with purposeful animations for easy shopping</li>
                   </ul>
               }
+          projectLink="https://streetwear.netlify.com"
+          github="https://github.com/anitaewesiobi/react-ecommerce-streetwear"
 
           ></SingleProject>
         
@@ -82,6 +83,8 @@ function App() {
                             <li>Gallery of branding images funneling traffic to instagram</li>
                         </ul>
                 }
+          projectLink="http://www.duellemusic.com/"
+          github="https://github.com/"
 
             ></SingleProject>
           <SingleProject
@@ -107,6 +110,8 @@ function App() {
               icondesc3="Bootstrap 4"
               icon4="fab fa-html5"
               icondesc4="HTML 5"
+          projectLink="https://venue-find.netlify.com/"
+          github="https://github.com/anitaewesiobi/venue-find"
           ></SingleProject>
             <SingleProject
                 color="#32baa8"
@@ -131,6 +136,8 @@ function App() {
                             <li>Styled Components for modular CSS component styling</li>
                         </ul>
                 }
+          projectLink="https://palace-heights.netlify.com/"
+          github="https://github.com/anitaewesiobi/react-hotel"
             ></SingleProject>
             <SingleProject
               color="#e55d4b"
@@ -156,6 +163,8 @@ function App() {
                             <li>Minimalist user interface making it easy to decide which recipes to indulge in</li>
                         </ul>
                 }
+          projectLink="https://fridgehack.netlify.com"
+          github="https://github.com/anitaewesiobi/FridgeHack"
             ></SingleProject>
             <SingleProject
               color="#1D64A5"
@@ -180,6 +189,8 @@ function App() {
                             <li>Menu with minimal design showcasing dishes visually, detailing price and ingredients</li>
                         </ul>
                 }
+          projectLink="https://mikuni.netlify.com/"
+          github="https://github.com/anitaewesiobi/restaurant"
             ></SingleProject>
 
         </Slider>
