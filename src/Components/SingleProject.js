@@ -5,7 +5,7 @@ function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3
 
     return (
 
-        <SingleProjectWrapper textColor={color}>
+        <SingleProjectWrapper textColor={color} className="section">
             <Title
                 head="Projects"
                 num={slide}
@@ -17,7 +17,7 @@ function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3
                          <div className="underline mx-auto"></div></div>
                 </div>
                 <div className="col-5 text-center middle">
-                    <video src={mockup} autoPlay={true} loop={true} muted className="banner__mockup right-header" ></video>
+                    <video data-keepplaying src={mockup} autoPlay={true} loop={true} muted className="banner__mockup right-header" ></video>
                 </div>
                 <div className="col-3 text-left far-right">
                     <div className="project-description">
@@ -59,10 +59,10 @@ function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3
                     </div>
                     <div className="buttons text-center">
                         <a target="_blank" href={projectLink}>
-                            <button className="mx-3">View Site</button>
+                            <button className="mx-3 button pulse">View Site</button>
                         </a>
                         <a href={github} target="_blank">
-                            <button className="mx-3">View Code</button>
+                            <button className="mx-3 button pulse">View Code</button>
                         </a>
                     </div>
                 </div>
@@ -128,23 +128,26 @@ background-color: black;
     color: ${props => props.textColor};
 }
 button{
-    color: #f5f5f5;
+    color: black;
     background-color:${props => props.textColor};
     border: none;
     font-size: 1vw;
     padding:1vw;
+    font-weight: 700;
 }
 button:focus, button:hover{
-    background-color:;
+    background-color:darken(${props => props.textColor},10%);
     border: none;
-    color: color:${props => props.textColor};
     outline: none;
+    box-shadow: 0 4px 17px rgba(0,0,0,0.2);
+    transform: translate3d(0, -2px, 0);
 }
 .projects-row{
     height: 100vh;
 }
 .title-subtext{
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-weight: 200;
     font-family: var(--hFont);
     color: white;
     font-size: 2.5vw;

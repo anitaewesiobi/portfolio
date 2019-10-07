@@ -6,16 +6,16 @@ import AnitaLogo from "../AnitaLogo.png"
 function Header() {
     return (
   
-        <HeaderWrapper className="container-fluid">
+        <HeaderWrapper className="container-fluid section">
         <div className="name text-justify"><p>Anita</p><p>Ewesiobi</p></div>
         <div className="row top-row">
           <div className="col-4 left-header">
           <Title num="01" head="Portfolio"/>
-            <div className="swipe text-left">drag right to continue</div>
+            <div className="swipe text-left"></div>
           </div>
           <div className="banner col-8">
             <img src={AnitaLogo} alt="logo" className="logo" />
-            <video src="https://uce68569ef428810faab5fa96d0e.dl.dropboxusercontent.com/cd/0/inline/Ap4bXyk0ff_V9wztyx5oB-mZLIZn1NqPbtLQSb3lpM0YkRyEP7lH0VSmuJxZ5QS6z-O4HMCZCKmicuWnvFnL78a7VQCWn-ZOJWI0OW8Y0rmGoSktLsJOcSdNAxDHsaT0n4o/file#" autoPlay={true} loop={true} muted className="banner__video right-header"></video>
+            <video data-keepplaying src="https://www.dropbox.com/s/50mynj58cxt7r3x/bgVid.mp4?raw=1" autoPlay={true} loop={true} muted className="banner__video right-header"></video>
             <div className="about-section">
               <div className="about-me text-right">
                 developing purposeful web applications
@@ -65,6 +65,7 @@ margin-left: 2vw;
   text-transform: uppercase;
   position: absolute;
   z-index:9;
+  font-size: 9vw;
 }
 
 .banner {
@@ -105,9 +106,6 @@ margin-left: 2vw;
   text-transform: uppercase;
   font-weight: 500;
 font-family: var(--pFont);
-}
-.name{
-  font-size:8vw;
 }
 
 `

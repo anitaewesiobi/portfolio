@@ -1,3 +1,5 @@
+
+
 * {
 margin: 0;
 padding:0;
@@ -12,18 +14,96 @@ body{
     --hFont:'Lato', sans-serif;
     --pFont: 'Work Sans', sans-serif;
 }
- .slick-prev:before, .slick-next:before {
-display: none;
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
 }
+a:hover{
+  text-decoration: none;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: #C06C84;
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.1);
+  border-radius: 5px;
+  height: 45px;
+  padding: 0 30px;
+  color: #fff;
+  font-family: Lato, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .3s, transform .3s, box-shadow .3s;
+   will-change: transform;
+}
+  .button:active {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    transform: translate3d(0, 1px, 0);
+  }
 
-.preloader{
-    background: #0f0f0f;
+
+.pulse {
+  position: relative;
+}
+  .pulse:before, .pulse:after {
+    content: '';
     position: absolute;
-    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin: auto;
+  }
+
+  .pulse:before {
+    animation: pulse 1.5s infinite linear;
+  }
+  .pulse:after {
+    animation: pulse 2s .4s infinite linear;
+  }
+
+  .pulse:hover:before, .pulse:hover:after {
+    display: none;
+  }
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: rgba(32, 32, 32, 0.61)!important;
+
+}
+.preloader{
+    background: rgb(10, 10, 10);
+    position: absolute;
+    z-index: 9999!important;
     width: 100%;
     height: 100vh;
-    -webkit-animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s both;
-	        animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s both;
+    -webkit-animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both;
+	        animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both;
+}
+.preloader-text {
+  position: relative;
+  z-index: 10000!important;
+  color: rgb(146, 146, 146);
+  font-family: var(--hFont);
+  top: 49%;
+ text-align: center;
+ font-weight: 600;
+
 }
 @-webkit-keyframes slide-top {
   0% {
