@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Title from "./Title"
 import AnitaLogo from "../AnitaLogo.png"
+import Poster from "../Poster.png"
 
 function Header() {
     return (
@@ -14,8 +15,8 @@ function Header() {
             <div className="swipe text-left"></div>
           </div>
           <div className="banner col-8">
-            <img src={AnitaLogo} alt="logo" className="logo" />
-            <video data-keepplaying src="https://www.dropbox.com/s/50mynj58cxt7r3x/bgVid.mp4?raw=1" autoPlay={true} loop={true} muted className="banner__video right-header"></video>
+            <img src={AnitaLogo} alt="logo" className="logo mt-3" />
+            <video data-keepplaying src="https://www.dropbox.com/s/50mynj58cxt7r3x/bgVid.mp4?raw=1" autoPlay={true} loop={true}  poster={Poster} muted  mute className="banner__video right-header" id="vid"></video>
             <div className="about-section">
               <div className="about-me text-right">
                 developing purposeful web applications
@@ -27,12 +28,12 @@ function Header() {
     )
 }
 export const HeaderWrapper = styled.header`
-font-family: var(--hFont);
 color: #e0e0e0;
 background-color: black;
 position: relative;
 margin-bottom:0;
 padding-bottom:0;
+font-family: var(--hFont)!important;
 .swipe{
   color: white;
   opacity: 0.4;
@@ -104,9 +105,10 @@ margin-left: 2vw;
 .about-me{
   font-size: 1vw;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 font-family: var(--pFont);
 }
+
 
 `
 

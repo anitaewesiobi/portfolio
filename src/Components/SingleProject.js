@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Title from './Title';
-function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3, icon4, icondesc1, icondesc2, icondesc3, icondesc4, title, subtitle, solution, challenge, slide }) {
+function SingleProject({ poster, projectLink, github, color, mockup, icon1, icon2, icon3, icon4, icondesc1, icondesc2, icondesc3, icondesc4, title, subtitle, solution, challenge, slide }) {
 
     return (
 
@@ -17,7 +17,7 @@ function SingleProject({ projectLink, github, color, mockup, icon1, icon2, icon3
                          <div className="underline mx-auto"></div></div>
                 </div>
                 <div className="col-5 text-center middle">
-                    <video data-keepplaying src={mockup} autoPlay={true} loop={true} muted className="banner__mockup right-header" ></video>
+                    <video data-keepplaying src={mockup} autoPlay={true} loop={true}  poster={poster} muted className="banner__mockup right-header" ></video>
                 </div>
                 <div className="col-3 text-left far-right">
                     <div className="project-description">
@@ -100,7 +100,7 @@ background-color: black;
 }
 .technologies, .features{
      text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     font-family: var(--pFont);
 }
 .description{
