@@ -11,15 +11,15 @@ function SingleProject({ poster, projectLink, github, color, mockup, icon1, icon
                 num={slide}
             />
             <div className="projects-row row mx-1">
-                <div className=" far-left text-left col-4">
-                    <div className="project-title text-left"> {title}</div>
-                    <div className="title-subtext text-left">{subtitle}
+                <div className=" far-left text-left col-md-4 col-12">
+                    <div className="project-title text-center text-md-left"> {title}</div>
+                    <div className="title-subtext text-center text-md-left">{subtitle}
                          <div className="underline mx-auto"></div></div>
                 </div>
-                <div className="col-5 text-center middle">
-                    <video data-keepplaying src={mockup} autoPlay={true} loop={true}  poster={poster} muted className="banner__mockup right-header" ></video>
+                <div className="col-md-5 col-12 text-center middle">
+                    <video data-keepplaying src={mockup} autoPlay={true} loop={true}  poster={poster} muted className="banner__mockup right-header"  ></video>
                 </div>
-                <div className="col-3 text-left far-right">
+                <div className="col-md-3 col-12 text-left far-right">
                     <div className="project-description">
                         <div className="technologies text-center mb-1">Technologies</div>
                         <div className="icons">
@@ -43,13 +43,13 @@ function SingleProject({ poster, projectLink, github, color, mockup, icon1, icon
 
                             </div>
                         </div>
-                        <div className="features text-center mt-4">
+                        <div className="features text-center mt-md-4">
                             Description
                         </div>
                         <div className="description">
                             <div className="challenge mt-1 mb-2"> <span className="challenge-title mr-2">Challenge:</span>{challenge}
                             </div>
-                            <div className="solution my-4">
+                            <div className="solution my-2 my-md-4">
                                 <span className="solution-title">
                                     Solution:
                          </span>
@@ -85,7 +85,6 @@ background-color: black;
 }
 .middle {
   position: relative;
-  overflow: hidden;
 }
 .challenge-title,.solution-title{
     font-size: 1.2vw;
@@ -116,13 +115,10 @@ background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 144%;
+  width: 100%;
   height: auto;
   min-height: 100%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 1;
-  margin-left: .5vw;
- 
 }
 .fab{
     color: ${props => props.textColor};
@@ -166,6 +162,5 @@ button:focus, button:hover{
 .far-left, .middle{
     border-right: 0.04em gray dashed;
 }
-
 `
 export default SingleProject
